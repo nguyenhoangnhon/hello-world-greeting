@@ -1,4 +1,4 @@
-node('docker') {
+node('any') {
   stage('Poll') {
     checkout scm
   }
