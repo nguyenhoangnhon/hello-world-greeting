@@ -1,4 +1,4 @@
-node('any') {
+node {
   stage('Poll') {
     checkout scm
   }
