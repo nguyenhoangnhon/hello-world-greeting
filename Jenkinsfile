@@ -1,4 +1,4 @@
-node  {
+node {
   stage('Poll') {
     checkout scm
   }
@@ -12,3 +12,7 @@ node  {
   }
   stage ('Integration Test'){
     sh 'mvn clean verify -Dsurefire.skip=true';
+    junit '**/target/failsafe-reports/TEST-*.xml'
+    archive 'target/*.jar'
+  }
+}
