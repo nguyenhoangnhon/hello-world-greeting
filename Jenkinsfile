@@ -10,4 +10,5 @@ node('docker_it') {
   }
   stage ('Integration test'){
     sh 'mvn clean verify -Dsurefire.skip=true';
+  }
 }
